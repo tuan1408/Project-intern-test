@@ -1,0 +1,137 @@
+.header {
+  background: rgb(243, 246, 250);
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+
+    .header-bars {
+      display: none;
+    }
+  }
+
+  &-logo {
+    padding-top: 26px;
+    padding-bottom: 19px;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0 32px;
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    &-link {
+      color: inherit;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+
+      font-weight: 600;
+    }
+  }
+
+  &-auth {
+    font-weight: bold;
+    font-size: 14px;
+    align-items: center;
+    line-height: 18px;
+
+    letter-spacing: 0.3px;
+
+    .signup {
+      color: #fff;
+    }
+
+    .signin {
+      color: $default;
+      padding: 12px 0;
+      margin: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    &-container {
+      height: 60px;
+      font-size: 80%;
+    }
+
+    &-logo {
+      padding: 0;
+    }
+
+    .menu {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &-container {
+      .header-bars {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+        cursor: pointer;
+
+        .fa-times {
+          transform: rotate(180deg);
+          color: $default;
+          transition-duration: 0.2s;
+        }
+
+        .fa-user.active {
+          color: $default;
+        }
+      }
+    }
+
+    .menu {
+      padding: 0;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      z-index: 100;
+
+      background: #fff;
+      text-align: center;
+      right: 0;
+      display: block;
+
+      transition: all 0.2s linear;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &-link {
+        display: block;
+        padding: 20px;
+      }
+    }
+
+    .menu.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    &-auth {
+      position: absolute;
+      top: 20%;
+      right: -110%;
+      transition: all 0.5s linear;
+
+      background: #fff;
+      z-index: 100;
+
+      &.active {
+        right: 30px;
+      }
+    }
+  }
+}

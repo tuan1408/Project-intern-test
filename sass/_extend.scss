@@ -1,0 +1,153 @@
+.extend {
+  &-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin: 88px 0;
+  }
+
+  &-image {
+    flex: 1 1 450px;
+    .img {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    flex: 1 1 450px;
+  }
+
+  .content {
+    &-heading {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 0.1px;
+    }
+
+    &-desc {
+      letter-spacing: 0.3px;
+      line-height: 22px;
+      font-weight: 400;
+      font-size: 16px;
+
+      color: $gray-dark;
+      margin-top: 32px;
+    }
+
+    &-form {
+      margin-top: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    &-input {
+      background: #f4f5f4;
+      flex: 1;
+      padding: 11px 16px;
+      border: none;
+
+      outline: none;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+
+      color: $gray-dark;
+    }
+
+    &-sub {
+      color: $gray-dark;
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    &-delivery {
+      margin-top: 56px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+
+  .delivery {
+    &-desc {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.3px;
+
+      font-weight: 400;
+      color: $gray-dark;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .extend {
+    &-container {
+      margin: 70px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .extend {
+    .content {
+      &-heading {
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 0.1px;
+      }
+
+      &-desc {
+        letter-spacing: 0.2px;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+
+        margin-top: 28px;
+      }
+
+      &-form {
+        margin-top: 38px;
+        gap: 22px;
+      }
+
+      &-delivery {
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .extend {
+    &-container {
+      margin: 50px 0;
+    }
+
+    &-image {
+      flex: unset;
+      .img {
+        width: 100%;
+      }
+    }
+
+    &-content {
+      flex: unset;
+      width: 100%;
+    }
+
+    .content {
+      &-form {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.bottom {
+  margin-bottom: 95px;
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: 30px;
+  }
+
+  &-image {
+    .img {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    text-align: center;
+  }
+
+  &-heading {
+    padding-top: 32px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    line-height: 24px;
+
+    letter-spacing: 0.1px;
+  }
+
+  &-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+}

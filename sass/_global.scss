@@ -1,0 +1,43 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  line-height: 1;
+  font-family: $font;
+  color: $black-color;
+  font-weight: 700;
+
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  transition: all 0.2s linear;
+}
+
+.btn {
+  background-color: $default;
+  padding: 12px 18px;
+  display: inline-block;
+  text-align: center;
+
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn-trans {
+  color: $default;
+  border: 1px solid $default;
+  background: none;
+  padding: 11px 18px;
+
+  text-align: center;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  line-height: 18px;
+}
